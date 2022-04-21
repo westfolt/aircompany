@@ -4,10 +4,10 @@ namespace Aircompany.Planes
 {
     public abstract class Plane
     {
-        public string _model;
-        public int _maxSpeed;
-        public int _maxFlightDistance;
-        public int _maxLoadCapacity;
+        private readonly string _model;
+        private readonly int _maxSpeed;
+        private readonly int _maxFlightDistance;
+        private readonly int _maxLoadCapacity;
 
         public Plane(string model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity)
         {
@@ -22,17 +22,17 @@ namespace Aircompany.Planes
             return _model;
         }
 
-        public int GetMS()
+        public int GetMs()
         {
             return _maxSpeed;
         }
 
-        public int MAXFlightDistance()
+        public int MaxFlightDistance()
         {
             return _maxFlightDistance;
         }
 
-        public int MAXLoadCapacity()
+        public int MaxLoadCapacity()
         {
             return _maxLoadCapacity;
         }
@@ -65,7 +65,7 @@ namespace Aircompany.Planes
             hashCode = hashCode * -1521134295 + _maxFlightDistance.GetHashCode();
             hashCode = hashCode * -1521134295 + _maxLoadCapacity.GetHashCode();
             return hashCode;
-        }        
+        }
 
     }
 }
